@@ -3,6 +3,7 @@ const buttons = document.querySelectorAll('.tab-btn');
 const subButtonsUnidad3 = document.querySelectorAll('#sub-nav-unidad3 .sub-tab-btn');
 const subButtonsUnidad4 = document.querySelectorAll('#sub-nav-unidad4 .sub-tab-btn');
 const subButtonsUnidad5 = document.querySelectorAll('#sub-nav-unidad5 .sub-tab-btn');
+const subButtonsUnidad6 = document.querySelectorAll('#sub-nav-unidad6 .sub-tab-btn');
 const panels = document.querySelectorAll('.panel');
 const clickSound = document.getElementById('click-sound');
 const bgMusic = document.getElementById('bg-music');
@@ -225,6 +226,7 @@ buttons.forEach(btn => {
       document.getElementById('sub-nav-unidad3').style.display = 'block';
       document.getElementById('sub-nav-unidad4').style.display = 'none';
       document.getElementById('sub-nav-unidad5').style.display = 'none';
+      document.getElementById('sub-nav-unidad6').style.display = 'none';
       // Activate first sub-tab
       subButtonsUnidad3.forEach(b => b.classList.remove('active'));
       const firstSub = document.querySelector('#sub-nav-unidad3 .sub-tab-btn[data-tab="inicio"]');
@@ -236,6 +238,7 @@ buttons.forEach(btn => {
       document.getElementById('sub-nav-unidad3').style.display = 'none';
       document.getElementById('sub-nav-unidad4').style.display = 'block';
       document.getElementById('sub-nav-unidad5').style.display = 'none';
+      document.getElementById('sub-nav-unidad6').style.display = 'none';
       // Activate first sub-tab
       subButtonsUnidad4.forEach(b => b.classList.remove('active'));
       const firstSub = document.querySelector('#sub-nav-unidad4 .sub-tab-btn[data-tab="nuestra-idea"]');
@@ -247,6 +250,7 @@ buttons.forEach(btn => {
       document.getElementById('sub-nav-unidad3').style.display = 'none';
       document.getElementById('sub-nav-unidad4').style.display = 'none';
       document.getElementById('sub-nav-unidad5').style.display = 'block';
+      document.getElementById('sub-nav-unidad6').style.display = 'none';
       // Activate first sub-tab
       subButtonsUnidad5.forEach(b => b.classList.remove('active'));
       const firstSub = document.querySelector('#sub-nav-unidad5 .sub-tab-btn[data-tab="indicadores-desempenio"]');
@@ -254,10 +258,23 @@ buttons.forEach(btn => {
         firstSub.classList.add('active');
         document.getElementById('indicadores-desempenio').classList.add('active');
       }
+    } else if (target === 'unidad-6') {
+      document.getElementById('sub-nav-unidad3').style.display = 'none';
+      document.getElementById('sub-nav-unidad4').style.display = 'none';
+      document.getElementById('sub-nav-unidad5').style.display = 'none';
+      document.getElementById('sub-nav-unidad6').style.display = 'block';
+      // Activate first sub-tab
+      subButtonsUnidad6.forEach(b => b.classList.remove('active'));
+      const firstSub = document.querySelector('#sub-nav-unidad6 .sub-tab-btn[data-tab="plan-sostenibilidad"]');
+      if (firstSub) {
+        firstSub.classList.add('active');
+        document.getElementById('plan-sostenibilidad').classList.add('active');
+      }
     } else {
       document.getElementById('sub-nav-unidad3').style.display = 'none';
       document.getElementById('sub-nav-unidad4').style.display = 'none';
       document.getElementById('sub-nav-unidad5').style.display = 'none';
+      document.getElementById('sub-nav-unidad6').style.display = 'none';
       document.getElementById(target).classList.add('active');
     }
   });
@@ -319,6 +336,29 @@ subButtonsUnidad5.forEach(btn => {
     
     // Actualizar sub-botones activos
     subButtonsUnidad5.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    
+    // Mostrar panel activo
+    panels.forEach(panel => {
+      if (panel.id === target) {
+        panel.classList.add('active');
+      } else {
+        panel.classList.remove('active');
+      }
+    });
+  });
+});
+
+// Manejo de clics en sub-botones unidad 6
+subButtonsUnidad6.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = btn.getAttribute('data-tab');
+    
+    // Reproducir sonido de clic retro
+    playClickSound();
+    
+    // Actualizar sub-botones activos
+    subButtonsUnidad6.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     
     // Mostrar panel activo
