@@ -56,6 +56,7 @@
       <button class="tab-btn active" data-tab="unidad-3">Unidad 3</button>
       <button class="tab-btn" data-tab="unidad-4">Unidad 4</button>
       <button class="tab-btn" data-tab="unidad-5">Unidad 5</button>
+      <button class="tab-btn" data-tab="unidad-6">Unidad 6</button>
     </nav>
 
     <div class="sub-nav" id="sub-nav-unidad3" style="display: none;">
@@ -78,6 +79,16 @@
       <button class="sub-tab-btn" data-tab="indicadores-desempenio">Indicadores de Desempeño</button>
       <button class="sub-tab-btn" data-tab="certificados-sostenibilidad">Certificados</button>
       <button class="sub-tab-btn" data-tab="inversion-responsable">Inversión Responsable</button>
+    </div>
+
+    <div class="sub-nav" id="sub-nav-unidad6" style="display: none;">
+      <button class="sub-tab-btn" data-tab="plan-sostenibilidad">Plan de Sostenibilidad</button>
+      <button class="sub-tab-btn" data-tab="partes-plan">Partes del Plan</button>
+      <button class="sub-tab-btn" data-tab="importancia-plan">Importancia</button>
+      <button class="sub-tab-btn" data-tab="horizonte-temporal">Horizonte Temporal</button>
+      <button class="sub-tab-btn" data-tab="esquema-plan">Esquema del Plan</button>
+      <button class="sub-tab-btn" data-tab="formacion-trabajadores">Formación</button>
+      <button class="sub-tab-btn" data-tab="reflexion-final">Reflexión Final</button>
     </div>
 
     <div class="music-controls">
@@ -755,6 +766,46 @@
             <div class="tetris-next">
               <p><strong>Siguiente pieza</strong></p>
               <canvas id="nextCanvas" tabindex="0" width="80" height="80"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- ASTEROIDS GAME -->
+        <div class="game-story">
+          <h3>🚀 EcoDefender: Protegiendo el Espacio Sustentable 🚀</h3>
+          <p>En el futuro sostenible de TerraTech, eres el <strong>Defensor Ecológico</strong> encargado de proteger el espacio digital de asteroides contaminantes. Cada asteroide destruido representa la eliminación de una fuente de contaminación energética.</p>
+          <p>Maneja tu nave espacial ♻️, dispara proyectiles de energía limpia ⚡ y destruye todos los asteroides para avanzar de nivel. ¡Pero cuidado! Si chocas con un asteroide, perderás una vida.</p>
+          <p style="margin-top: 15px; font-size: 0.95rem; color: #0077b6; font-weight: 500;">🎯 <strong>Objetivo:</strong> Destruye todos los asteroides y sobrevive el mayor tiempo posible.</p>
+        </div>
+
+        <div class="asteroids-game-layout">
+          <div class="asteroids-instructions">
+            <h4>Instrucciones</h4>
+            <ul>
+              <li>Usa <strong>WASD</strong> o <strong>Flechas</strong> para girar y acelerar la nave.</li>
+              <li>Presiona <strong>Espacio</strong> para disparar energía limpia.</li>
+              <li>Evita chocar con los asteroides contaminantes.</li>
+              <li>Destruye todos los asteroides para avanzar de nivel.</li>
+              <li>Presiona <strong>Iniciar</strong> y espera la cuenta atrás para prepararte.</li>
+            </ul>
+            <p class="asteroids-tip"><strong>Consejo:</strong> El impulso se acumula, así que controla bien la velocidad para evitar choques.</p>
+          </div>
+
+          <div class="asteroids-play-area">
+            <div class="asteroids-board-wrapper">
+              <canvas id="asteroidsCanvas" width="600" height="400"></canvas>
+              <div id="asteroidsCountdown" class="countdown-overlay"></div>
+            </div>
+            <div class="asteroids-info">
+              <p><strong>Puntuación:</strong> <span id="asteroidsScore">0</span></p>
+              <p><strong>Vidas:</strong> <span id="asteroidsLives">3</span></p>
+              <p><strong>Nivel:</strong> <span id="asteroidsLevel">1</span></p>
+              <p><strong>Controles:</strong> WASD / Flechas para mover, Espacio para disparar</p>
+              <div class="asteroids-buttons">
+                <button id="asteroidsStart" class="game-btn">Iniciar</button>
+                <button id="asteroidsPause" class="game-btn">Pausar</button>
+                <button id="asteroidsReset" class="game-btn">Reiniciar</button>
+              </div>
             </div>
           </div>
         </div>
@@ -1493,12 +1544,512 @@
       </div>
     </section>
 
+    <section class="panel" id="plan-sostenibilidad">
+      <h2>📋 ¿Qué es un plan de sostenibilidad y para qué sirve?</h2>
+      
+      <div class="content-section">
+        <h3>Definición del Plan de Sostenibilidad</h3>
+        <p class="intro-text">Un plan de sostenibilidad es un documento estratégico donde la empresa define sus objetivos para reducir su impacto ambiental, mejorar su impacto social y asegurar una buena gestión interna.</p>
+        
+        <div class="definition-card">
+          <div class="definition-icon">📋</div>
+          <p><strong>Propósito principal:</strong> Organizar las acciones sostenibles de la empresa de manera sistemática y medible.</p>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h3>¿Para qué sirve un plan de sostenibilidad?</h3>
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            <div class="benefit-icon">📊</div>
+            <h5>Medir Resultados</h5>
+            <p>Permite cuantificar el progreso en energía, emisiones, residuos y otros indicadores ambientales.</p>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">🏆</div>
+            <h5>Mejorar Imagen</h5>
+            <p>Fortalece la reputación frente a clientes, inversores y la sociedad en general.</p>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">⚖️</div>
+            <h5>Cumplir Normativas</h5>
+            <p>Asegura el cumplimiento de regulaciones ambientales y estándares de sostenibilidad.</p>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">🎯</div>
+            <h5>Organizar Acciones</h5>
+            <p>Estructura todas las iniciativas sostenibles de manera coherente y priorizada.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section highlight">
+        <h3>Importancia para TerraTech Systems</h3>
+        <p>En nuestra empresa es especialmente relevante porque trabajamos con tecnología que consume mucha energía. Un plan de sostenibilidad nos permite demostrar que podemos ser eficientes y responsables al mismo tiempo.</p>
+      </div>
+    </section>
+
+    <section class="panel" id="partes-plan">
+      <h2>🔧 ¿Qué partes tiene un plan de sostenibilidad?</h2>
+      
+      <div class="content-section">
+        <h3>Estructura Básica de un Plan de Sostenibilidad</h3>
+        <p class="intro-text">Un plan de sostenibilidad bien estructurado incluye varios componentes esenciales que permiten su implementación efectiva.</p>
+      </div>
+
+      <div class="content-section">
+        <h3>1. Análisis Inicial</h3>
+        <div class="analysis-section">
+          <div class="analysis-icon">🔍</div>
+          <h4>Situación Actual de la Empresa</h4>
+          <ul class="analysis-list">
+            <li>Evaluación del impacto ambiental actual</li>
+            <li>Análisis de consumo energético</li>
+            <li>Identificación de stakeholders clave</li>
+            <li>Revisión de procesos internos</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h3>2. Objetivos</h3>
+        <div class="objectives-section">
+          <div class="objectives-icon">🎯</div>
+          <h4>Metas Específicas y Medibles</h4>
+          <div class="objectives-examples">
+            <div class="objective-example">
+              <h5>Reducción de Consumo Energético</h5>
+              <p>Disminuir el consumo en un porcentaje determinado</p>
+            </div>
+            <div class="objective-example">
+              <h5>Reducción de Emisiones CO₂</h5>
+              <p>Objetivos específicos de disminución de huella de carbono</p>
+            </div>
+            <div class="objective-example">
+              <h5>Mejora Social</h5>
+              <p>Aumento de empleos locales o formación de trabajadores</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h3>3. Acciones Concretas</h3>
+        <div class="actions-section">
+          <div class="actions-icon">⚙️</div>
+          <h4>Medidas Prácticas para Alcanzar Objetivos</h4>
+          <p>Actividades específicas como implementación de energías renovables, mejora de procesos o formación del personal.</p>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h3>4. Indicadores de Medición</h3>
+        <div class="indicators-section">
+          <div class="indicators-icon">📊</div>
+          <h4>Datos para Evaluar el Progreso</h4>
+          <ul class="indicators-list">
+            <li>KPI de consumo energético</li>
+            <li>Métricas de reducción de emisiones</li>
+            <li>Indicadores de satisfacción de stakeholders</li>
+            <li>Medidas de eficiencia operativa</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h3>5. Seguimiento y Mejora Continua</h3>
+        <div class="followup-section">
+          <div class="followup-icon">🔄</div>
+          <h4>Revisión Periódica de Resultados</h4>
+          <p>Sistema de monitoreo continuo que permite ajustar estrategias y mejorar el desempeño sostenible.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="importancia-plan">
+      <h2>⭐ ¿Por qué es importante para nuestra empresa?</h2>
+      
+      <div class="content-section">
+        <h3>Relevancia Estratégica para TerraTech Systems</h3>
+        <p class="intro-text">Un plan de sostenibilidad no es solo una obligación regulatoria, sino una oportunidad estratégica para nuestro crecimiento y diferenciación en el mercado.</p>
+      </div>
+
+      <div class="content-section">
+        <h3>Beneficios Ambientales</h3>
+        <div class="environmental-benefits">
+          <div class="benefit-card">
+            <div class="benefit-icon">🌍</div>
+            <h4>Reducción del Impacto</h4>
+            <p>Minimiza el impacto ambiental de nuestros centros de datos, que son intensivos en energía.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">⚡</div>
+            <h4>Eficiencia Energética</h4>
+            <p>Reduce costes operativos mediante optimización del consumo energético.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h3>Beneficios Empresariales</h3>
+        <div class="business-benefits">
+          <div class="benefit-card">
+            <div class="benefit-icon">🤝</div>
+            <h4>Confianza de Clientes</h4>
+            <p>Aumenta la lealtad y atracción de clientes corporativos preocupados por la sostenibilidad.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">💼</div>
+            <h4>Diferenciación Competitiva</h4>
+            <p>Nos posiciona como líderes en tecnología sostenible dentro del sector.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">💰</div>
+            <h4>Atracción de Inversores</h4>
+            <p>Facilita el acceso a financiación sostenible y fondos de inversión responsable.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section highlight">
+        <h3>Impacto a Largo Plazo</h3>
+        <p>La implementación de un plan de sostenibilidad asegura la viabilidad futura de TerraTech Systems en un mercado cada vez más consciente del medio ambiente y las responsabilidades corporativas.</p>
+      </div>
+    </section>
+
+    <section class="panel" id="horizonte-temporal">
+      <h2>⏰ Horizonte temporal (2–4 años)</h2>
+      
+      <div class="content-section">
+        <h3>Plan de Sostenibilidad a 3 Años - TerraTech Systems</h3>
+        <p class="intro-text">Nuestro plan estratégico se desarrolla en tres fases anuales, permitiendo una implementación gradual y medible de nuestras iniciativas sostenibles.</p>
+      </div>
+
+      <div class="content-section">
+        <h3>Año 1: Fundación y Medición</h3>
+        <div class="year-plan">
+          <div class="year-header">
+            <div class="year-icon">📊</div>
+            <h4>Establecimiento de Bases</h4>
+          </div>
+          <div class="year-activities">
+            <div class="activity-item">
+              <h5>Medición Inicial</h5>
+              <p>Realizar auditoría completa del consumo energético y huella de carbono actual.</p>
+            </div>
+            <div class="activity-item">
+              <h5>Sistemas de Refrigeración</h5>
+              <p>Mejorar y optimizar sistemas de refrigeración pasiva en centros de datos.</p>
+            </div>
+            <div class="activity-item">
+              <h5>Capacitación Inicial</h5>
+              <p>Formar al equipo en principios básicos de sostenibilidad energética.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h3>Año 2: Implementación y Expansión</h3>
+        <div class="year-plan">
+          <div class="year-header">
+            <div class="year-icon">🚀</div>
+            <h4>Desarrollo de Iniciativas</h4>
+          </div>
+          <div class="year-activities">
+            <div class="activity-item">
+              <h5>Reutilización de Hardware</h5>
+              <p>Implementar programas de reutilización y reacondicionamiento de componentes.</p>
+            </div>
+            <div class="activity-item">
+              <h5>Software de Monitorización</h5>
+              <p>Desarrollar e implementar herramientas de monitorización energética en todos los clientes.</p>
+            </div>
+            <div class="activity-item">
+              <h5>Colaboraciones</h5>
+              <p>Establecer partnerships con proveedores de energías renovables.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h3>Año 3: Optimización y Certificación</h3>
+        <div class="year-plan">
+          <div class="year-header">
+            <div class="year-icon">🏆</div>
+            <h4>Consolidación de Resultados</h4>
+          </div>
+          <div class="year-activities">
+            <div class="activity-item">
+              <h5>Reducción de Emisiones</h5>
+              <p>Alcanzar reducción del 30% en emisiones de CO₂ respecto al año base.</p>
+            </div>
+            <div class="activity-item">
+              <h5>Certificaciones Ambientales</h5>
+              <p>Obtener certificaciones reconocidas como ISO 14001 y otras estándares ambientales.</p>
+            </div>
+            <div class="activity-item">
+              <h5>Reporte Transparente</h5>
+              <p>Publicar informes anuales detallados de sostenibilidad verificados externamente.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section highlight">
+        <h3>Metodología de Seguimiento</h3>
+        <p>Cada fase incluye indicadores clave de rendimiento (KPI) específicos, revisiones trimestrales y ajustes basados en datos reales para asegurar el cumplimiento de objetivos.</p>
+      </div>
+    </section>
+
+    <section class="panel" id="esquema-plan">
+      <h2>📐 Esquema del plan de sostenibilidad de TerraTech Systems</h2>
+      
+      <div class="content-section">
+        <h3>Ámbito Ambiental</h3>
+        <div class="environmental-scope">
+          <div class="scope-item">
+            <div class="scope-icon">⚡</div>
+            <h4>Uso de Energía 100% Renovable</h4>
+            <p>Transición completa a fuentes de energía limpia en todas nuestras operaciones.</p>
+          </div>
+          <div class="scope-item">
+            <div class="scope-icon">📉</div>
+            <h4>Reducción del Consumo Energético</h4>
+            <p>Optimización de procesos para minimizar el uso de energía en centros de datos.</p>
+          </div>
+          <div class="scope-item">
+            <div class="scope-icon">♻️</div>
+            <h4>Reutilización y Reciclaje de Hardware</h4>
+            <p>Implementación de economía circular en la gestión de equipos tecnológicos.</p>
+          </div>
+          <div class="scope-item">
+            <div class="scope-icon">🚫</div>
+            <h4>Eliminación de Combustibles Fósiles</h4>
+            <p>Descarbonización total de nuestra cadena de suministro y operaciones.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h3>Ámbito Social</h3>
+        <div class="social-scope">
+          <div class="scope-item">
+            <div class="scope-icon">🎓</div>
+            <h4>Donación de Equipos a Centros Educativos</h4>
+            <p>Programa de donación de hardware reacondicionado para fomentar la educación tecnológica.</p>
+          </div>
+          <div class="scope-item">
+            <div class="scope-icon">📚</div>
+            <h4>Formación de Empleados</h4>
+            <p>Desarrollo profesional continuo en tecnologías sostenibles y mejores prácticas.</p>
+          </div>
+          <div class="scope-item">
+            <div class="scope-icon">👷</div>
+            <h4>Creación de Empleo Técnico Estable</h4>
+            <p>Generación de puestos de trabajo especializados en sostenibilidad tecnológica.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h3>Ámbito Económico</h3>
+        <div class="economic-scope">
+          <div class="scope-item">
+            <div class="scope-icon">💡</div>
+            <h4>Reducción de Costes Energéticos</h4>
+            <p>Ahorro operativo mediante eficiencia energética y energías renovables.</p>
+          </div>
+          <div class="scope-item">
+            <div class="scope-icon">📈</div>
+            <h4>Mejora de Eficiencia</h4>
+            <p>Optimización de procesos para mayor productividad y menores costes.</p>
+          </div>
+          <div class="scope-item">
+            <div class="scope-icon">💰</div>
+            <h4>Atracción de Inversores Sostenibles</h4>
+            <p>Acceso a financiación verde y fondos de inversión responsable.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h3>Ámbito de Gobernanza</h3>
+        <div class="governance-scope">
+          <div class="scope-item">
+            <div class="scope-icon">📅</div>
+            <h4>Informes Trimestrales de Sostenibilidad</h4>
+            <p>Reportes periódicos transparentes sobre nuestro desempeño ambiental y social.</p>
+          </div>
+          <div class="scope-item">
+            <div class="scope-icon">🔍</div>
+            <h4>Transparencia en Datos</h4>
+            <p>Publicación abierta de métricas verificables y procesos de auditoría.</p>
+          </div>
+          <div class="scope-item">
+            <div class="scope-icon">⚖️</div>
+            <h4>Cumplimiento de Normativas</h4>
+            <p>Adherencia estricta a regulaciones ambientales y estándares de sostenibilidad.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="formacion-trabajadores">
+      <h2>🎓 Formación para trabajadores (idea original)</h2>
+      
+      <div class="content-section">
+        <h3>"Tech Green Week" - Semana Verde Tecnológica</h3>
+        <p class="intro-text">Programa innovador de formación interna diseñado para concienciar y capacitar a nuestros empleados en prácticas sostenibles dentro del sector tecnológico.</p>
+        
+        <div class="program-overview">
+          <div class="program-icon">🌱</div>
+          <h4>Formato: Jornadas Internas Semanales</h4>
+          <p>Una semana completa dedicada a la formación en sostenibilidad tecnológica.</p>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h3>Cronograma de Actividades</h3>
+        <div class="schedule-timeline">
+          <div class="day-item">
+            <div class="day-header">
+              <div class="day-number">1</div>
+              <h4>Día 1: Impacto Ambiental</h4>
+            </div>
+            <p>Charla sobre el impacto ambiental específico de los centros de datos y la tecnología en general.</p>
+          </div>
+          
+          <div class="day-item">
+            <div class="day-header">
+              <div class="day-number">2</div>
+              <h4>Día 2: Taller Práctico</h4>
+            </div>
+            <p>Taller práctico de reparación y mantenimiento de hardware para extender su vida útil.</p>
+          </div>
+          
+          <div class="day-item">
+            <div class="day-header">
+              <div class="day-number">3</div>
+              <h4>Día 3: Simulación Energética</h4>
+            </div>
+            <p>Simulación interactiva de reducción de consumo energético en entornos de servidor.</p>
+          </div>
+          
+          <div class="day-item">
+            <div class="day-header">
+              <div class="day-number">4</div>
+              <h4>Día 4: Ideas Innovadoras</h4>
+            </div>
+            <p>Sesión de brainstorming donde empleados proponen ideas de mejora sostenible (formato concurso).</p>
+          </div>
+          
+          <div class="day-item">
+            <div class="day-header">
+              <div class="day-number">5</div>
+              <h4>Día 5: Presentación y Premios</h4>
+            </div>
+            <p>Presentación de resultados, evaluación de ideas y entrega de premios a las mejores propuestas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h3>Elementos Originales e Innovadores</h3>
+        <div class="innovative-elements">
+          <div class="element-item">
+            <div class="element-icon">🏆</div>
+            <h4>Ranking de Eficiencia</h4>
+            <p>Clasificación de equipos/departamentos por menor consumo energético durante la semana.</p>
+          </div>
+          <div class="element-item">
+            <div class="element-icon">💡</div>
+            <h4>Premio a la Mejor Idea Sostenible</h4>
+            <p>Reconocimiento especial a la propuesta más innovadora e implementable.</p>
+          </div>
+          <div class="element-item">
+            <div class="element-icon">🤝</div>
+            <h4>Compromisos Individuales</h4>
+            <p>Cada participante firma un compromiso personal de aplicar prácticas sostenibles.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section highlight">
+        <h3>Objetivos del Programa</h3>
+        <div class="program-objectives">
+          <div class="objective-item">
+            <h4>Concienciación</h4>
+            <p>Educar a los empleados sobre la importancia de la sostenibilidad en el sector tecnológico.</p>
+          </div>
+          <div class="objective-item">
+            <h4>Participación Activa</h4>
+            <p>Involucrar al personal en la definición e implementación de iniciativas sostenibles.</p>
+          </div>
+          <div class="objective-item">
+            <h4>Cultura Organizacional</h4>
+            <p>Fomentar una cultura de responsabilidad ambiental dentro de TerraTech Systems.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="reflexion-final">
+      <h2>🤔 Reflexión final</h2>
+      
+      <div class="content-section">
+        <h3>El Plan de Sostenibilidad como Pilar Estratégico</h3>
+        <p class="intro-text">La implementación de un plan de sostenibilidad transforma a TerraTech Systems de una empresa tecnológica convencional en una organización responsable y visionaria.</p>
+      </div>
+
+      <div class="content-section">
+        <h3>Transformación Empresarial</h3>
+        <div class="transformation-card">
+          <div class="transformation-icon">🔄</div>
+          <p><strong>De empresa tecnológica a empresa responsable:</strong> El plan nos permite integrar la sostenibilidad en nuestro ADN corporativo, demostrando que el rendimiento técnico y la responsabilidad ambiental pueden coexistir y potenciarse mutuamente.</p>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h3>Objetivos Claros y Medibles</h3>
+        <div class="objectives-summary">
+          <div class="objective-summary-item">
+            <div class="objective-icon">🎯</div>
+            <h4>Visión a Largo Plazo</h4>
+            <p>Establecemos metas concretas con horizontes temporales definidos (2-4 años).</p>
+          </div>
+          <div class="objective-summary-item">
+            <div class="objective-icon">📊</div>
+            <h4>Medición Continua</h4>
+            <p>Implementamos indicadores que permiten evaluar el progreso real y ajustar estrategias.</p>
+          </div>
+          <div class="objective-summary-item">
+            <div class="objective-icon">🔄</div>
+            <h4>Mejora Continua</h4>
+            <p>El plan incluye mecanismos de revisión y optimización basados en resultados.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section highlight">
+        <h3>Impacto en Stakeholders</h3>
+        <p>El plan de sostenibilidad fortalece nuestra relación con todos los grupos de interés: empleados más motivados, clientes más leales, inversores más confiados y una sociedad que nos ve como agentes de cambio positivo.</p>
+      </div>
+
+      <div class="content-section">
+        <h3>Compromiso con el Futuro</h3>
+        <p>TerraTech Systems se posiciona como líder en la transformación sostenible del sector tecnológico, demostrando que la innovación responsable no solo es posible, sino que es la mejor estrategia para el éxito a largo plazo.</p>
+      </div>
+    </section>
+
   <footer>
     © 2025 TerraTech - BloomWare
   </footer>
   </div>
 
   <script src="tetris.js"></script>
+  <script src="asteroids.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
